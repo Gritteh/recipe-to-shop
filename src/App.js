@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.scss'
 import MenuItem from './MenuItem/MenuItem'
+import CreateRecipe from './CreateRecipe/CreateRecipe.js'
 
 class App extends React.Component {
 	constructor(props) {
@@ -43,9 +44,7 @@ class App extends React.Component {
 					</div>
 				}
 				{ this.state.displayedItem === 'create-recipe' && 
-					<div>
-						YES
-					</div>
+					<CreateRecipe />
 				}
 				{ this.state.displayedItem === 'edit-recipes' &&
 					<div></div>

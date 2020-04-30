@@ -1,0 +1,32 @@
+@import '../variables.scss';
+
+.create-recipe {
+    display: inline-block;
+	width: 100vw;
+	height: 100vh;
+    background-color: $background;
+    .create-recipe__wrapper {
+        width: 85vw;
+		margin: 0 auto;
+		text-align: center;
+        color: $black;
+        .top {
+            height: 15vh;
+            background: blue;
+        }
+        .middle {
+            height: 75vh;
+            background: purple;
+        }
+        .bottom {
+            height: 10vh;
+            background: pink;
+        }
+    }
+	@media (min-width: $laptop-small) {
+        .create-recipe__wrapper {
+            width: 75vw;
+			max-width: 600px;
+        }
+    }
+}
