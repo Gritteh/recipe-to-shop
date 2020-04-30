@@ -1,0 +1,53 @@
+@import '../css/variables.scss';
+
+.item-container {
+    height: 60px;
+    margin-top: 5px;
+
+    &.in-focus {
+        input.ingredient-input {
+            width: 76%;
+        }
+        button {
+            visibility: visible;
+        }
+    }
+
+
+}
+
+input[type=number].quantity-input {
+    width: 12%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+input.ingredient-input {
+    width: 88%;
+    height: 100%;
+    padding-left: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: left;
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type=number] {
+    width: 12%;
+    height: 100%;
+    border-radius: 5px;
+    color: $black;
+}
+
+.done-button {
+    width: 12%;
+    height: 100%;
+    border-radius: 5px;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 65px;
+    visibility: hidden;
+}

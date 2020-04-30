@@ -1,35 +1,57 @@
-@import './variables.scss';
+@import './css/reset.scss';
+@import './css/fonts.scss';
+@import './css/variables.scss';
 
-.main-menu {
+.main-container {
 	display: inline-block;
 	width: 100vw;
 	height: 100vh;
 	background-color: $background;
-	> div, > h1 {
+	font-family: "Baloo Tamma 2", Arial, sans-serif;
+	font-weight: 500;
+	> div {
+		display: block;
 		width: 85vw;
 		margin: 0 auto;
 		text-align: center;
 		color: $black;
+		@media (min-width: $laptop-small) {
+			width: 75vw;
+			max-width: 600px;
+		}
+	}
+}
+
+.main-menu {
+	& > h1 {
+		margin: 0;
 	}
 	.main-menu__title {
 		font-size: 40px;
 		padding: 8vh 0;
+		@media (min-width: $laptop-small) {
+			font-size: 70px;
+		}
 	}
 	@media (min-width: $mobile-large) {
 
 	}
-	@media (min-width: $laptop-small) {
-		> div, > h1 {
-			width: 75vw;
-			max-width: 600px;
-		}
-		.main-menu__title {
-			font-size: 70px;
-			padding: 40px 0;
-		}
-		.main-menu__items {
-			
-		}
-	}
+}
 
+input[type=text], input[type=number], button {
+    display: inline-block;
+    border: none;
+	box-sizing: border-box;
+    background-color: $lighter-purple;
+    font-size: 40px;
+    text-align: center;
+    font-family: "Baloo Tamma 2", Arial, sans-serif;
+	font-weight: 500;
+	&:focus {
+		outline: none;
+	}
+}
+
+* {
+	color: $black;
 }

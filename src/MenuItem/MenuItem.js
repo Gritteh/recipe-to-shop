@@ -9,8 +9,8 @@ class MenuItem extends React.Component {
     render() {
         const { itemName, displayText, showMe } = this.props
         return (
-            <div className="menu-item" onClick={ () => showMe(itemName) }>
-                { displayText }
+            <div className='menu-item' onClick={ () => showMe(itemName) }>
+                <p>{ displayText }</p>
             </div>
         )
     }
