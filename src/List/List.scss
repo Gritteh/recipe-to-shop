@@ -1,3 +1,5 @@
+@import '../css/variables.scss';
+
 .list-container {
     button.add-item {
         width: 100%;
@@ -6,8 +8,9 @@
         font-size: 57px;
         line-height: 64px;
         box-sizing: border-box;
+        border-radius: 5px;
         padding-top: 3px;
-        background-color: #81c784;
+        background-color: $green;
         cursor: pointer;
     }
 }

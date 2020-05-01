@@ -13,9 +13,19 @@ class List extends React.Component {
                 }
             ]
         }
+
+        this.removeListItem = this.removeListItem.bind(this)
         this.onAddItem = this.onAddItem.bind(this)
         this.updateQuantityValue = this.updateQuantityValue.bind(this)
         this.updateTextValue = this.updateTextValue.bind(this)
+    }
+
+    removeListItem = (updateList) => (index) => {
+        let items = [...this.state.items]
+        items.splice(index, 1)
+        this.setState({ items }, () => {
+            updateList(this.state.items)
+        })
     }
 
     onAddItem() {
@@ -69,6 +79,7 @@ class List extends React.Component {
                         updateTextValue={ this.updateTextValue(updateList) }
                         quantityValue={ item.quantity }
                         updateQuantityValue={ this.updateQuantityValue(updateList) }
+                        removeListItem={ this.removeListItem(updateList) }
                     />
                 ))}
                 <button className='add-item' onClick={ this.onAddItem }>+</button>

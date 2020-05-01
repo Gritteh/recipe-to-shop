@@ -38,7 +38,7 @@
 	}
 }
 
-input[type=text], input[type=number], button {
+input[type=text], input[type=number], button, select {
     display: inline-block;
     border: none;
 	box-sizing: border-box;
@@ -50,6 +50,10 @@ input[type=text], input[type=number], button {
 	&:focus {
 		outline: none;
 	}
+}
+
+button {
+	user-select: none;
 }
 
 * {
