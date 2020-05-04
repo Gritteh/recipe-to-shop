@@ -63,7 +63,7 @@ class ListItem extends React.Component {
     }
 
     handleNumberChange(event, updateQuantityValue, i) {
-        updateQuantityValue(i, event.target.value)
+        updateQuantityValue(i, Number(event.target.value))
     }
 
     handleTextChange(event, updateTextValue, i) {

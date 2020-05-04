@@ -21,9 +21,9 @@ class List extends React.Component {
     }
 
     removeListItem = (updateList) => (index) => {
-        let items = [...this.state.items]
-        items.splice(index, 1)
-        this.setState({ items }, () => {
+        this.setState((prevState) => ({
+            items: prevState.items.filter((_, i) => i !== index)
+        }), () => {
             updateList(this.state.items)
         })
     }
