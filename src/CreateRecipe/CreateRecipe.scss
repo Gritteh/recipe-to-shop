@@ -2,6 +2,7 @@
 
 .create-recipe {
     background-color: $background;
+    display: inline-block;
     .create-recipe__wrapper {
         .top, .middle {
             border-bottom: 1px solid $black;
